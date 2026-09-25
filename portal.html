@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Cliente | Silva & Associados Advocacia</title>
+    <link rel="stylesheet" href="portal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- BARRA NAVEGAÇÃO DARK GLASS -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-icon-box">
+                        <span class="logo-symbol">⚖</span>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-bold">SILVA & ASSOCIADOS</span>
+                        <span class="logo-sub">ADVOCACIA ESTRATÉGICA</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="especialidades.html" class="nav-link">Especialidades</a>
+                <a href="atendimento.html" class="nav-link">Atendimento</a>
+                <a href="avaliacoes.html" class="nav-link">Avaliações</a>
+                <a href="portal.html" class="nav-link nav-link-portal active">Portal do Cliente</a>
+            </nav>
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-glow-sm">
+                <span>Falar com Advogado</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- BANNER DE CABEÇALHO -->
+    <section class="page-header">
+        <div class="container">
+            <span class="badge-sub">Área Exclusiva</span>
+            <h1 class="page-title">Portal do <span class="text-gold">Cliente</span></h1>
+            <p class="page-subtitle">Acompanhe seus processos em tempo real, acesse documentos e comunique-se com sua equipe jurídica com total segurança.</p>
+        </div>
+    </section>
+
+    <!-- TELA DE LOGIN (EXIBIDA PRIMEIRO POR PADRÃO) -->
+    <section id="loginView" class="login-section">
+        <div class="container">
+            <div class="login-card">
+                <div class="login-header">
+                    <div class="login-icon">🔒</div>
+                    <h2>Acesse sua Conta</h2>
+                    <p>Informe seus dados cadastrados para acessar seus processos.</p>
+                </div>
+
+                <form class="login-form" onsubmit="realizarLogin(event)">
+                    <div class="form-group">
+                        <label for="cpfInput">CPF ou E-mail</label>
+                        <input type="text" id="cpfInput" placeholder="000.000.000-00" required class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passwordInput">Senha de Acesso</label>
+                        <input type="password" id="passwordInput" placeholder="••••••••" required class="form-input">
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Lembrar de mim
+                        </label>
+                        <a href="#" class="forgot-pass" onclick="alert('Instruções de recuperação enviadas para seu e-mail.')">Esqueceu a senha?</a>
+                    </div>
+
+                    <button type="submit" class="btn-primary-glow btn-block">Entrar no Portal</button>
+                </form>
+
+                <div class="login-footer">
+                    <p>Ainda não possui acesso? <a href="https://wa.me/5500000000000" target="_blank">Solicite ao seu advogado responsável</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DASHBOARD DO CLIENTE (OCULTO ATÉ QUE O LOGIN SEJA EFETUADO) -->
+    <section id="dashboardView" class="portal-section" style="display: none;">
+        <div class="container">
+            
+            <!-- BARRA DE SAUDAÇÃO E STATUS DO CLIENTE -->
+            <div class="user-welcome-bar">
+                <div class="user-info">
+                    <div class="user-avatar-lg">EV</div>
+                    <div>
+                        <h2>Bem-vindo(a), <span class="text-gold">Erik Vieira</span></h2>
+                        <span class="user-meta">CPF: ***.458.980-** • Cliente ativo desde 2025</span>
+                    </div>
+                </div>
+                <div class="user-actions">
+                    <button class="btn-secondary-sm" onclick="alert('Dados do perfil atualizados com sucesso!')">Editar Perfil</button>
+                    <button class="btn-logout" onclick="realizarLogout()">Sair</button>
+                </div>
+            </div>
+
+            <!-- CARDS DE RESUMO RÁPIDO -->
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <span class="stat-icon">📑</span>
+                    <div>
+                        <h4>02</h4>
+                        <p>Processos Ativos</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🔔</span>
+                    <div>
+                        <h4>01</h4>
+                        <p>Nova Atualização</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">📂</span>
+                    <div>
+                        <h4>12</h4>
+                        <p>Documentos Salvos</p>
+                    </div>
+                </div>
+                <div class="stat-card highlight">
+                    <span class="stat-icon">⚖</span>
+                    <div>
+                        <h4>Dr. Silva</h4>
+                        <p>Advogado Responsável</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTEÚDO PRINCIPAL DO PORTAL GRID -->
+            <div class="portal-grid">
+                
+                <!-- COLUNA ESQUERDA: LINHA DO TEMPO DO PROCESSO -->
+                <div class="portal-main">
+                    
+                    <div class="card-box">
+                        <div class="card-header-flex">
+                            <h3>Ação em Andamento Nº 5002341-88.2026.8.26.0100</h3>
+                            <span class="badge-status status-active">Em Tramitação</span>
+                        </div>
+                        <p class="case-detail"><strong>Vara:</strong> 3ª Vara Cível da Comarca de São Paulo/SP | <strong>Assunto:</strong> Direito Empresarial e Contratos</p>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot active"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">02 de Agosto de 2026 - 14:30</span>
+                                    <h4>Petição Intermediária Juntada aos Autos</h4>
+                                    <p>Nossa equipe protocolou a réplica contestando os pontos apresentados pela parte contrária. Aguardando manifestação do juiz.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">15 de Julho de 2026 - 10:15</span>
+                                    <h4>Contestação Apresentada pelo Réu</h4>
+                                    <p>A parte ré apresentou a defesa. Os documentos foram analisados pelo Dr. Silva e os pontos de divergência mapeados.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">20 de Junho de 2026 - 16:00</span>
+                                    <h4>Audiência de Conciliação Realizada</h4>
+                                    <p>Sem acordo entre as partes nesta etapa. O processo segue para a fase probatória conforme o cronograma do tribunal.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CENTRAL DE DOCUMENTOS -->
+                    <div class="card-box margin-top-20">
+                        <h3>Central de Documentos</h3>
+                        <p class="card-sub">Baixe peças processuais ou envie novos documentos para sua equipe jurídica.</p>
+                        
+                        <div class="docs-list">
+                            <div class="doc-item">
+                                <span class="doc-icon">PDF</span>
+                                <div class="doc-info">
+                                    <strong>Petição_Inicial_Assinada.pdf</strong>
+                                    <span>Adicionado em 10/05/2026 • 2.4 MB</span>
+                                </div>
+                                <button class="btn-download" onclick="alert('Iniciando download do documento...')">Download</button>
+                            </div>
+
+                            <div class="doc-item">
+                                <span class="doc-icon">PDF</span>
+                                <div class="doc-info">
+                                    <strong>Procuracao_Ad_Judicia.pdf</strong>
+                                    <span>Adicionado em 08/05/2026 • 1.1 MB</span>
+                                </div>
+                                <button class="btn-download" onclick="alert('Iniciando download do documento...')">Download</button>
+                            </div>
+                        </div>
+
+                        <div class="upload-area">
+                            <input type="file" id="fileUpload" hidden>
+                            <label for="fileUpload" class="upload-label">
+                                <span>📤 Clique para enviar um novo documento ou comprovante</span>
+                                <small>Formatos aceitos: PDF, PNG, JPG (Máx: 20MB)</small>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- COLUNA DIREITA: SUPORTE E MENSAGENS DIRETA -->
+                <div class="portal-sidebar">
+                    
+                    <div class="card-box">
+                        <h3>Atendimento Direto</h3>
+                        <p class="card-sub">Precisa tirar dúvidas sobre o andamento do seu caso?</p>
+                        
+                        <div class="attendant-profile">
+                            <div class="attendant-avatar">⚖</div>
+                            <div>
+                                <strong>Dr. Henrique Silva</strong>
+                                <span>Advogado Titular</span>
+                                <small class="status-online">● Online Agora</small>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5500000000000" target="_blank" class="btn-primary-glow btn-block">
+                            Chamar no WhatsApp Exclusivo
+                        </a>
+
+                        <div class="quick-notice">
+                            <strong>📌 Horário de Atendimento VIP:</strong>
+                            <p>Segunda a Sexta, das 09h às 18h. Respondemos suas mensagens prioritariamente em até 2 horas úteis.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-box margin-top-20">
+                        <h3>Segurança & Acesso</h3>
+                        <p class="card-sub">Seus dados são encriptados de ponta a ponta em conformidade com a LGPD.</p>
+                        <ul class="security-list">
+                            <li>🔒 Conexão Criptografada SSL</li>
+                            <li>📜 Em conformidade com LGPD</li>
+                            <li>🛡 Sigilo Profissional OAB</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col-about">
+                <div class="logo-bold">SILVA & ASSOCIADOS</div>
+                <p>Escritório de advocacia referência em alta performance, inovação jurídica e foco incansável nos resultados do cliente.</p>
+            </div>
+            <div>
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="atendimento.html">Atendimento</a></li>
+                    <li><a href="avaliacoes.html">Avaliações</a></li>
+                    <li><a href="portal.html">Portal do Cliente</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <p>📍 Av. Paulista, 1000 - São Paulo/SP</p>
+                <p>📞 (11) 99999-8888</p>
+                <p>✉️ contato@silvaadvocacia.com.br</p>
+                <p>⚖️ OAB/SP 000.000</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Silva & Associados. Todos os direitos reservados. Projeto em conformidade com o Código de Ética da OAB.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE LÓGICA DE SIMULAÇÃO DE LOGIN -->
+    <script>
+        function realizarLogin(event) {
+            event.preventDefault();
+            // Esconde a tela de login e exibe o dashboard do cliente
+            document.getElementById('loginView').style.display = 'none';
+            document.getElementById('dashboardView').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function realizarLogout() {
+            // Esconde o dashboard e volta para a tela de login
+            document.getElementById('dashboardView').style.display = 'none';
+            document.getElementById('loginView').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>

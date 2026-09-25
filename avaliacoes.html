@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações | Silva & Associados Advocacia</title>
+    <link rel="stylesheet" href="avaliacoes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- BARRA NAVEGAÇÃO DARK GLASS -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-icon-box">
+                        <span class="logo-symbol">⚖</span>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-bold">SILVA & ASSOCIADOS</span>
+                        <span class="logo-sub">ADVOCACIA ESTRATÉGICA</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="especialidades.html" class="nav-link">Especialidades</a>
+                <a href="atendimento.html" class="nav-link">Atendimento</a>
+                <a href="avaliacoes.html" class="nav-link active">Avaliações</a>
+                <a href="portal.html" class="nav-link nav-link-portal">Portal do Cliente</a>
+            </nav>
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-glow-sm">
+                <span>Falar com Advogado</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- BANNER DE CABEÇALHO DA PÁGINA -->
+    <section class="page-header">
+        <div class="container">
+            <span class="badge-sub">Prova Social & Transparência</span>
+            <h1 class="page-title">O Que Dizem Nossos <span class="text-gold">Clientes</span></h1>
+            <p class="page-subtitle">A satisfação e o sucesso de quem confia no nosso trabalho são os melhores indicadores da nossa dedicação e excelência jurídica.</p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE REPUTAÇÃO E FORMULÁRIO DE NOVA AVALIAÇÃO -->
+    <section class="reputation-summary">
+        <div class="container summary-grid">
+            
+            <!-- CARD DE NOTA ATUAL -->
+            <div class="score-card">
+                <span class="score-number">4.9</span>
+                <div class="stars">★★★★★</div>
+                <p class="score-text">Nota Média no Google</p>
+                <span class="score-sub">+250 avaliações verificadas</span>
+            </div>
+            
+            <!-- FORMULÁRIO PARA O CLIENTE DEIXAR UMA NOVA AVALIAÇÃO -->
+            <div class="leave-review-box">
+                <h3>Deixe sua Avaliação</h3>
+                <p>Foi atendido por nós? Compartilhe sua experiência:</p>
+                
+                <form class="review-form" onsubmit="event.preventDefault(); alert('Obrigado por sua avaliação!');">
+                    <div class="form-row">
+                        <input type="text" placeholder="Seu Nome Completo" required class="form-input">
+                        <select required class="form-input">
+                            <option value="" disabled selected>Sua Nota (1 a 5 estrelas)</option>
+                            <option value="5">★★★★★ (5/5) Excelente</option>
+                            <option value="4">★★★★☆ (4/5) Muito Bom</option>
+                            <option value="3">★★★☆☆ (3/5) Bom</option>
+                            <option value="2">★★☆☆☆ (2/5) Regular</option>
+                            <option value="1">★☆☆☆☆ (1/5) Ruim</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Escreva seu depoimento sobre nosso atendimento..." required class="form-input form-textarea" rows="3"></textarea>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-write-review">Enviar Avaliação</button>
+                        <a href="https://g.page/r/seu-link-google/review" target="_blank" class="btn-google-direct">Ou avaliar direto no Google ★</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- ESTATÍSTICAS RÁPIDAS -->
+            <div class="stat-box">
+                <h3>+1.200</h3>
+                <p>Casos Resolvidos</p>
+            </div>
+            <div class="stat-box">
+                <h3>98%</h3>
+                <p>Índice de Satisfação</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE AVALIAÇÕES - EFEITO ESCADA ROLANTE (INFINITE TICKER) -->
+    <section class="reviews-section">
+        <div class="ticker-wrapper">
+            <div class="ticker-track">
+                
+                <!-- CARD 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">RC</div>
+                        <div>
+                            <h4>Roberto Camargo</h4>
+                            <span class="review-date">Avaliado via Google</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Excelente atendimento! Estava com um problema grave de rescisão contratual e resolveram tudo com agilidade."</p>
+                    <span class="case-tag">Área: Direito Empresarial</span>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">MA</div>
+                        <div>
+                            <h4>Maria Aparecida</h4>
+                            <span class="review-date">Avaliado via Google</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Fui muito bem acolhida no meu processo de divórcio. Profissionais humanos, transparentes e atenciosos."</p>
+                    <span class="case-tag">Área: Família e Sucessões</span>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">JL</div>
+                        <div>
+                            <h4>João Lucas Mendes</h4>
+                            <span class="review-date">Avaliado via Google</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Conseguiram reverter uma justa causa indevida. Recuperei meus direitos graças ao empenho do escritório."</p>
+                    <span class="case-tag">Área: Direito Trabalhista</span>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">FS</div>
+                        <div>
+                            <h4>Fernanda Santos</h4>
+                            <span class="review-date">Avaliado via Google</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Transparência total. O Portal do Cliente facilitou muito para acompanhar o andamento da ação sem complicação."</p>
+                    <span class="case-tag">Área: Cível e Indenizações</span>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">CP</div>
+                        <div>
+                            <h4>Carlos Eduardo</h4>
+                            <span class="review-date">Avaliado via Google</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Escritório de ponta! Agilidade incrível no WhatsApp e termos explicados sem enrolação jurídica."</p>
+                    <span class="case-tag">Área: Blindagem Patrimonial</span>
+                </div>
+
+                <!-- REPETIÇÃO DOS CARDS PARA EFEITO DE LOOP INFINITO CONTÍNUO -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">RC</div>
+                        <div>
+                            <h4>Roberto Camargo</h4>
+                            <span class="review-date">Avaliado via Google</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Excelente atendimento! Estava com um problema grave de rescisão contratual e resolveram tudo com agilidade."</p>
+                    <span class="case-tag">Área: Direito Empresarial</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">MA</div>
+                        <div>
+                            <h4>Maria Aparecida</h4>
+                            <span class="review-date">Avaliado via Google</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Fui muito bem acolhida no meu processo de divórcio. Profissionais humanos, transparentes e atenciosos."</p>
+                    <span class="case-tag">Área: Família e Sucessões</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">JL</div>
+                        <div>
+                            <h4>João Lucas Mendes</h4>
+                            <span class="review-date">Avaliado via Google</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Conseguiram reverter uma justa causa indevida. Recuperei meus direitos graças ao empenho do escritório."</p>
+                    <span class="case-tag">Área: Direito Trabalhista</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">FS</div>
+                        <div>
+                            <h4>Fernanda Santos</h4>
+                            <span class="review-date">Avaliado via Google</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Transparência total. O Portal do Cliente facilitou muito para acompanhar o andamento da ação sem complicação."</p>
+                    <span class="case-tag">Área: Cível e Indenizações</span>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="user-avatar">CP</div>
+                        <div>
+                            <h4>Carlos Eduardo</h4>
+                            <span class="review-date">Avaliado via Google</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Escritório de ponta! Agilidade incrível no WhatsApp e termos explicados sem enrolação jurídica."</p>
+                    <span class="case-tag">Área: Blindagem Patrimonial</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DÚVIDAS FREQUENTES (FAQ) -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-title-box">
+                <span class="badge-sub">Tire Suas Dúvidas</span>
+                <h2>Perguntas <span class="text-gold">Frequentes</span></h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Como funciona a primeira consulta jurídica?</h3>
+                    <p>Realizamos uma triagem inicial sem compromisso para entender seu caso. Caso haja complexidade, agendamos uma consulta detalhada com o advogado especialista da área.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Atendem clientes fora de São Paulo?</h3>
+                    <p>Sim! Atuamos em todo o território nacional através do processo judicial 100% digital e atendimentos via videochamada e WhatsApp.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Como acompanho o andamento do meu processo?</h3>
+                    <p>Nossos clientes possuem acesso exclusivo ao Portal do Cliente em nosso site, onde podem visualizar atualizações e documentos do processo em tempo real.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Quais são as formas de pagamento dos honorários?</h3>
+                    <p>Oferecemos condições flexíveis, podendo ser por êxito (em determinadas causas), parcelamento no cartão de crédito ou boleto bancário.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION FINAL -->
+    <section class="cta-banner">
+        <div class="container cta-content">
+            <h2>Quer ter o seu caso resolvido com a mesma excelência?</h2>
+            <p>Entre em contato com nossa equipe agora mesmo e receba um atendimento prioritário.</p>
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-primary-glow btn-lg">
+                Falar com Advogado no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col-about">
+                <div class="logo-bold">SILVA & ASSOCIADOS</div>
+                <p>Escritório de advocacia referência em alta performance, inovação jurídica e foco incansável nos resultados do cliente.</p>
+            </div>
+            <div>
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="atendimento.html">Atendimento</a></li>
+                    <li><a href="avaliacoes.html">Avaliações</a></li>
+                    <li><a href="portal.html">Portal do Cliente</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <p>📍 Av. Paulista, 1000 - São Paulo/SP</p>
+                <p>📞 (11) 99999-8888</p>
+                <p>✉️ contato@silvaadvocacia.com.br</p>
+                <p>⚖️ OAB/SP 000.000</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Silva & Associados. Todos os direitos reservados. Projeto em conformidade com o Código de Ética da OAB.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

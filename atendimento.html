@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento | Silva & Associados Advocacia</title>
+    <link rel="stylesheet" href="atendimento.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- BARRA NAVEGAÇÃO DARK GLASS -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-icon-box">
+                        <span class="logo-symbol">⚖</span>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-bold">SILVA & ASSOCIADOS</span>
+                        <span class="logo-sub">ADVOCACIA ESTRATÉGICA</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="especialidades.html" class="nav-link">Especialidades</a>
+                <a href="atendimento.html" class="nav-link active">Atendimento</a>
+                <a href="avaliacoes.html" class="nav-link">Avaliações</a>
+                <a href="portal.html" class="nav-link nav-link-portal">Portal do Cliente</a>
+            </nav>
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-glow-sm">
+                <span>Falar com Advogado</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- BANNER DE CABEÇALHO DA PÁGINA -->
+    <section class="page-header">
+        <div class="container">
+            <span class="badge-sub">Canais Diretos de Comunicação</span>
+            <h1 class="page-title">Agende seu <span class="text-gold">Atendimento</span></h1>
+            <p class="page-subtitle">Oferecemos consultoria presencial em nossa sede ou 100% online com a mesma segurança, sigilo e agilidade.</p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO PRINCIPAL DE ATENDIMENTO -->
+    <section class="atendimento-section">
+        <div class="container grid-atendimento">
+            
+            <!-- COLUNA ESQUERDA: CANAIS E INFORMAÇÕES -->
+            <div class="info-column">
+                <div class="info-card">
+                    <div class="info-icon">⚡</div>
+                    <div>
+                        <h3>Atendimento Rápido via WhatsApp</h3>
+                        <p>Respostas em até 15 minutos durante o horário comercial para triagem do seu caso.</p>
+                        <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp-direct">
+                            Iniciar Conversa no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <h3>Sede Presencial</h3>
+                        <p>Av. Paulista, 1000 - Bela Vista, São Paulo - SP</p>
+                        <span class="info-detail">Atendimento com hora marcada para total privacidade.</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🕒</div>
+                    <div>
+                        <h3>Horário de Funcionamento</h3>
+                        <p><strong>Segunda a Sexta:</strong> 08:30 às 18:30</p>
+                        <p><strong>Sábados:</strong> Plantão para urgências mediante agendamento prévio.</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <div>
+                        <h3>Outros Contatos</h3>
+                        <p><strong>Telefone:</strong> (11) 99999-8888</p>
+                        <p><strong>E-mail:</strong> contato@silvaadvocacia.com.br</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUNA DIREITA: FORMULÁRIO DE AGENDAMENTO -->
+            <div class="form-column">
+                <div class="form-card">
+                    <h2>Solicitar Consultoria</h2>
+                    <p class="form-subtitle">Preencha o formulário abaixo e nossa equipe entrará em contato para agendar seu atendimento.</p>
+                    
+                    <form action="#" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefone">WhatsApp / Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="seuemail@dominio.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="area">Área de Interesse</label>
+                            <select id="area" name="area" required>
+                                <option value="" disabled selected>Selecione a área do seu caso</option>
+                                <option value="trabalhista">Direito Trabalhista</option>
+                                <option value="familia">Direito de Família / Sucessões</option>
+                                <option value="empresarial">Direito Empresarial / Blindagem</option>
+                                <option value="civel">Direito Cível / Indenizações</option>
+                                <option value="outros">Outro Assunto</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="modalidade">Preferência de Atendimento</label>
+                            <select id="modalidade" name="modalidade" required>
+                                <option value="online">Online (Videochamada / WhatsApp)</option>
+                                <option value="presencial">Presencial (Sede São Paulo)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Resumo do Caso</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva brevemente o seu problema para direcionarmos ao advogado especialista." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit-glow">
+                            Enviar e Agendar Consulta
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col-about">
+                <div class="logo-bold">SILVA & ASSOCIADOS</div>
+                <p>Escritório de advocacia referência em alta performance, inovação jurídica e foco incansável nos resultados do cliente.</p>
+            </div>
+            <div>
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="atendimento.html">Atendimento</a></li>
+                    <li><a href="avaliacoes.html">Avaliações</a></li>
+                    <li><a href="portal.html">Portal do Cliente</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <p>📍 Av. Paulista, 1000 - São Paulo/SP</p>
+                <p>📞 (11) 99999-8888</p>
+                <p>✉️ contato@silvaadvocacia.com.br</p>
+                <p>⚖️ OAB/SP 000.000</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Silva & Associados. Todos os direitos reservados. Projeto em conformidade com o Código de Ética da OAB.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
